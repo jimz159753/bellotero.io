@@ -1,0 +1,200 @@
+.ant-tabs-ink-bar {
+  position: absolute;
+  top: 0;
+  background-color: #071eb3 !important;
+}
+
+.ant-tabs-nav-scroll {
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active {
+  color: #071eb3 !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab {
+  color: #071eb3;
+}
+
+.ant-tabs-bar img {
+  position: absolute;
+  left: 15%;
+  top: 20px;
+}
+
+.ant-tabs-nav {
+  display: flex !important;
+  align-items: center;
+  margin-right: 12% !important;
+  font-size: 16px;
+}
+
+.Rectangle {
+  width: 400px;
+  height: 60px;
+  background-color: #071eb3;
+  margin-left: 18%;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.Our-customers-love-u {
+  width: 400px;
+  height: 40px;
+  font-family: "Roboto";
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.11;
+  letter-spacing: 0.77px;
+  color: #ffffff;
+  padding: 7px;
+}
+
+.Rectangle-testimony {
+  width: 1002px;
+  height: 254px;
+  background-color: #ffffff;
+  margin-left: 18%;
+}
+
+.backgroundColor {
+  background-color: #f9faff;
+  height: 800px;
+  width: 100%;
+}
+
+.ant-tabs-bar {
+  margin-bottom: 0 !important;
+}
+
+.customer {
+      display: inline-block;
+      margin: 40px;
+}
+
+.Its-funny-what-mem {
+  width: 565px;
+  height: 190px;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #161616;
+  margin: 40px;
+}
+
+.Rectangle-number-pagination {
+  width: 120px;
+  height: 56px;
+  background-color: #071eb3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Rectangle-number-pagination p {
+  width: 35px;
+  height: 32px;
+  font-family: CormorantGaramond;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: 0.69px;
+  color: #ffffff;
+  margin:  0;
+}
+
+.Rectangle-pagination {
+  width: 120px;
+  height: 56px;
+  background-color: #071eb3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  font-stretch: normal;
+  font-family: CormorantGaramond;
+  margin-left: 2px;
+}
+
+.Pagination-container {
+  display: flex;
+  position: absolute;
+  top: 82%;
+  left: 70%;
+}
+
+.title-save {
+  width: 280px;
+  height: 60px;
+  background-color: #071eb3;
+  margin-bottom: 5px;
+}
+
+.title-container {
+  margin: 130px 0 50px 240px;
+}
+
+.description-container {
+  margin-left: 240px;
+}
+
+.description-container p {
+  width: 380px;
+  height: 140px;
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.controls-container {
+  margin-top: 150px;
+}
+
+.Monthly-ingredient-s {
+  width: 160px;
+  height: 55px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #161616;
+}
+
+.input-number {
+  font-size: 34px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.input-number .ant-input-number-handler-wrap {
+  display: none;
+}
+
+.ant-input-number-lg {
+  width: 190px !important;
+  height: 55px !important;
+
+}
+
+.slider-container .ant-slider-track {
+  background-color: #071eb3 !important;
+}
+
+.slider-container .ant-slider-handle {
+  border: solid 2px #071eb3 !important;
+}
