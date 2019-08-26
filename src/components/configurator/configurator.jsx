@@ -11,7 +11,7 @@ export default class configurator extends Component {
                             <div className="title-save">
                                 <p className="Our-customers-love-u">Save more with</p>
                             </div>
-                            <div className="title-save">
+                            <div className="title-bellotero">
                                 <p className="Our-customers-love-u">Bellotero.io</p>
                             </div>
                         </div>
@@ -28,7 +28,7 @@ export default class configurator extends Component {
                                     
                                 </Col>
                                 <Col span={12}>
-                                    <InputNumber className="input-number" value={5} size="large" formatter={value => `$ ${value}`.replace('/\B(?=(\d{3})+(?!\d))/g', ',')}/>
+                                    <InputNumber className="input-number-monthly" value={5} size="large" formatter={value => `$ ${value}`.replace('/\B(?=(\d{3})+(?!\d))/g', ',')}/>
                                 </Col>
                             </div>
                             <Col span={18}>
@@ -39,11 +39,21 @@ export default class configurator extends Component {
                                     />
                                 </div>
                             </Col>
-                            <Col span={12}>
-                                <div className="controls-container">hello</div>
-                            </Col>
-                            <Col span={12}>
-                                <div className="controls-container">hello</div>
+                            <div className="controls-container">
+                                <Col span={12}>
+                                    <p className="Monthly-ingredient-s">Full-time employees that process invoices</p>
+                                </Col>
+                                <Col span={12}>
+                                    <InputNumber className="input-number-fulltime" value={5} size="large" formatter={value => `$ ${value}`.replace('/\B(?=(\d{3})+(?!\d))/g', ',')}/>
+                                </Col>
+                            </div>
+                            <Col span={18}>
+                                <div className="slider-container">
+                                    <Slider
+                                        min={1}
+                                        max={20}
+                                    />
+                                </div>
                             </Col>
                         </Row>
                     </Col>
