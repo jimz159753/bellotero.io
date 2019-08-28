@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React from 'react';
 import { Tabs } from 'antd';
 import bellotero from '../../assets/images/bellotero.png'
 import Home from  '../home/home';

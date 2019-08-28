@@ -2,5 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/core/App';
 import 'antd/dist/antd.css'; 
+import store from './components/store/store';
+import { Provider } from 'react-redux'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const nodes = (
+    <Provider store={store}>
+        <App/>
+    </Provider>
+);
+
+ReactDOM.render(nodes, document.getElementById('root'));
