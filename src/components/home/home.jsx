@@ -1,13 +1,55 @@
 import React, { Component } from 'react'
-import { Row, Col, Icon } from 'antd';
+import { connect } from 'react-redux';
+import { getData } from '../store/actions';
+import { Row, Col, Icon, Pagination } from 'antd';
+
+
+const itemRender = (current, type, originalElement)  => {
+    if (type === 'prev') {
+      return <Icon type="arrow-left" />;
+    }
+    if (type === 'next') {
+      return <Icon type="arrow-right" />;
+    }
+    return originalElement;
+  }
 
 export class home extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            current: 0,
+            size: 10,
+            title: '',
+            reviews: []
+        }
+        this.onChangePage = this.onChangePage.bind(this);
+    }
+
+    onChangePage(current, pageSize) {
+        this.setState({current});
+    }
+
+    componentDidMount() {
+        const { getData } = this.props;
+        getData('https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/page1.json')
+        const { request } = this.props;
+        this.setState({title: request.slider && request.slider.title, reviews: request.slider && request.slider.reviews})
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log('componentDidUpdate',prevProps, prevState)
+    }
+
     render() {
+        console.log('RENDER',this.state)
+        const { current, size, title } = this.state;
+        const { request } = this.props;
         return (
             <div className="backgroundColor">
                 <Row>
                     <div className="Rectangle">
-                        <p className="Our-customers-love-u">Our customers love us</p>
+                        <p className="Our-customers-love-u-1">{title}</p>
                     </div>
                 </Row>
                 <Row>
@@ -25,11 +67,10 @@ export class home extends Component {
                         </Col>
                         <div className="Pagination-container">
                             <div className="Rectangle-number-pagination">
-                                <p>1/4</p>
+                                <p>{current}/{size}</p>
                             </div>
                             <div className="Rectangle-pagination">
-                                <Icon type="arrow-left" />
-                                <Icon type="arrow-right" />
+                                <Pagination simple defaultCurrent={1} current={current} onChange={this.onChangePage} itemRender={itemRender} />
                             </div>
                         </div>
                     </div>
@@ -39,4 +80,12 @@ export class home extends Component {
     }
 }
 
-export default home
+const mapStateToProps = (state) => {
+    return state;
+}
+
+const mapDispatchToProps = {
+    getData
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(home);

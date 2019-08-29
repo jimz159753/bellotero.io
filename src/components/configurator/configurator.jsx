@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import { getData } from '../store/actions';
 import { Row, Col, InputNumber, Slider } from 'antd';
 
-export default class configurator extends Component {
+class configurator extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -23,8 +25,15 @@ export default class configurator extends Component {
         this.setState({fulltime, anual: fulltime * 1337 + food })
     }
 
+    componentDidMount() {
+        const { getData } = this.props;
+        getData('https://raw.githubusercontent.com/Bernabe-Felix/Bellotero/master/page2.json')
+    }
+
     render() {
+        console.log('RENDER-PAGE2',this.props)
         const { monthly, fulltime, food, anual } = this.state
+        const { request } = this.props
         return (
             <div className="backgroundColor">
                 <Row>
@@ -32,13 +41,12 @@ export default class configurator extends Component {
                         <div className="title-container">
                             <div className="title-save">
                                 <span>
-                                <p className="Our-customers-love-u"><span>lorem ipsum 
-                                    <br/> <br/> Bellotero</span>  </p>
+                                <p className="Our-customers-love-u"><span>{request.calculator && request.calculator.title}</span></p>
                                 </span>
                             </div>
                         </div>
                         <div className="description-container">
-                            <p>With Bellotero.io you save time and money make real-time decisions that boost your business and your bottom line. Get less wrongfully blocked payments, save time on bookkeeping and no need to worry about safety.</p>
+                            <p>{request.calculator && request.calculator.description}</p>
                         </div>
                     </Col>
                     <Col span={12}> 
@@ -107,3 +115,13 @@ export default class configurator extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return state;
+}
+
+const mapDispatchToProps = {
+    getData
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(configurator);

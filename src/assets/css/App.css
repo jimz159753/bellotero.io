@@ -44,6 +44,20 @@
   margin-bottom: 100px;
 }
 
+.Our-customers-love-u-1 {
+  width: 400px;
+  height: 40px;
+  font-family: "Roboto";
+  font-size: 36px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.11;
+  letter-spacing: 0.77px;
+  color: #ffffff;
+  padding: 9px;
+}
+
 .Our-customers-love-u {
   width: 400px;
   height: 40px;
@@ -56,13 +70,14 @@
   letter-spacing: 0.77px;
   color: #ffffff;
   background-clip: content-box;
-  line-height: 85%;
+  line-height: 168%;
+  
 }
 
 .Our-customers-love-u span {
   -webkit-box-decoration-break: clone;
   background-color: #071eb3;
-  padding: 4px 1px;
+  padding: 4px 8px;
 }
 
 .Rectangle-testimony {
@@ -108,6 +123,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 15px;
 }
 
 .Rectangle-number-pagination p {
@@ -137,6 +153,20 @@
   font-stretch: normal;
   font-family: CormorantGaramond;
   margin-left: 2px;
+}
+
+.Rectangle-pagination .ant-pagination-simple-pager {
+  display: none !important;
+}
+
+.Rectangle-pagination .ant-pagination-prev {
+  color: white !important;
+  font-size: 24px;
+}
+
+.Rectangle-pagination .ant-pagination-next {
+  color: white !important;
+  font-size: 24px;
 }
 
 .Pagination-container {
